@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <!-- Glow filters for each color -->
+    <filter id="glow-red" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-orange" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-yellow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-blue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-purple" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-pink" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background (pegboard) -->
+  <rect x="4" y="4" width="120" height="120" rx="12" fill="#0a0a12"/>
+  <rect x="8" y="8" width="112" height="112" rx="10" fill="#111118"/>
+
+  <!-- Empty peg holes (grid pattern) -->
+  <g fill="#1a1a22" opacity="0.6">
+    <!-- Row 1 -->
+    <circle cx="24" cy="24" r="5"/>
+    <circle cx="44" cy="24" r="5"/>
+    <circle cx="64" cy="24" r="5"/>
+    <circle cx="84" cy="24" r="5"/>
+    <circle cx="104" cy="24" r="5"/>
+    <!-- Row 2 -->
+    <circle cx="24" cy="44" r="5"/>
+    <circle cx="104" cy="44" r="5"/>
+    <!-- Row 3 -->
+    <circle cx="24" cy="64" r="5"/>
+    <circle cx="104" cy="64" r="5"/>
+    <!-- Row 4 -->
+    <circle cx="24" cy="84" r="5"/>
+    <circle cx="104" cy="84" r="5"/>
+    <!-- Row 5 -->
+    <circle cx="24" cy="104" r="5"/>
+    <circle cx="44" cy="104" r="5"/>
+    <circle cx="64" cy="104" r="5"/>
+    <circle cx="84" cy="104" r="5"/>
+    <circle cx="104" cy="104" r="5"/>
+  </g>
+
+  <!-- Glowing LED pegs - creating a simple star/burst pattern -->
+  <!-- Center -->
+  <circle cx="64" cy="64" r="6" fill="#ffff33" filter="url(#glow-yellow)"/>
+
+  <!-- Inner ring -->
+  <circle cx="64" cy="44" r="5" fill="#ff3333" filter="url(#glow-red)"/>
+  <circle cx="84" cy="54" r="5" fill="#ff9933" filter="url(#glow-orange)"/>
+  <circle cx="84" cy="74" r="5" fill="#33ff33" filter="url(#glow-green)"/>
+  <circle cx="64" cy="84" r="5" fill="#3399ff" filter="url(#glow-blue)"/>
+  <circle cx="44" cy="74" r="5" fill="#cc33ff" filter="url(#glow-purple)"/>
+  <circle cx="44" cy="54" r="5" fill="#ff66cc" filter="url(#glow-pink)"/>
+
+  <!-- Outer accents -->
+  <circle cx="44" cy="44" r="4" fill="#ff9933" filter="url(#glow-orange)"/>
+  <circle cx="84" cy="44" r="4" fill="#33ff33" filter="url(#glow-green)"/>
+  <circle cx="84" cy="84" r="4" fill="#cc33ff" filter="url(#glow-purple)"/>
+  <circle cx="44" cy="84" r="4" fill="#3399ff" filter="url(#glow-blue)"/>
+</svg>
